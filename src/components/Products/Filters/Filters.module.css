@@ -9,7 +9,7 @@
     width: 100%;
     position: sticky;
     z-index: 3;
-    top: 0; /* Ensure stickiness at the top */
+    top: 60px; /* Ensure stickiness at the top */
 }
 
 .filters .left {

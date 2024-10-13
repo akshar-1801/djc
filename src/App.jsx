@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import NavBar from "./layouts/Navbar/NavBar";
+import Header from "./layouts/Navbar/Header";
 import Footer from "./layouts/Footer/Footer";
 import Preloader from "./layouts/Preloader/Preloader";
 import Home_Page from "./pages/Home/home_page";
@@ -15,13 +15,20 @@ function App() {
       <Preloader />
       <BrowserRouter>
         {/* <NavBar /> */}
+        <Header />
         <Routes>
           <Route path="/" element={<Home_Page />} />
           <Route path="/home" element={<Home_Page />} />
           <Route path="/products" element={<Products_Page />} />
           <Route path="/products/:prodId" element={<SingleProduct_Page />} />
-          <Route path="/personalize" element={<Personalize_Page checkPageOne={true}/>} />
-          <Route path="/uploadIdea" element={<Personalize_Page checkPageOne={false}/>} />
+          <Route
+            path="/personalize"
+            element={<Personalize_Page checkPageOne={true} />}
+          />
+          <Route
+            path="/uploadIdea"
+            element={<Personalize_Page checkPageOne={false} />}
+          />
         </Routes>
         <Footer />
       </BrowserRouter>

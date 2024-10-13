@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  top: 60px;
 }
 
 .Personalized::-webkit-scrollbar{
